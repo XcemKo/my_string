@@ -1,0 +1,6 @@
+﻿  main.cpp
+  String.cpp
+  Создание кода...
+c:\users\xcem\source\repos\mystring\mystringwin\mystring\string.cpp(31): warning C4172: возвращение адреса локальной или временной переменной
+c:\users\xcem\source\repos\mystring\mystringwin\mystring\string.cpp(155): warning C4717: operator+: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+  MyString.vcxproj -> C:\Users\Xcem\source\repos\MyString\MyStringWin\Debug\MyString.exe

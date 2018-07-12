@@ -1,0 +1,577 @@
+
+;; Function Str operator+(const Str&, const Str&) (_ZplRK3StrS1_, funcdef_no=1029, decl_uid=20902, cgraph_uid=206, symbol_order=207)
+
+
+
+Str operator+(const Str&, const Str&)
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0[ax] 2[cx] 3[bx] 6[bp] 7[sp] 17[flags]
+;;  ref usage 	r0={10d,6u} r1={6d} r2={8d,3u} r3={3d,3u} r6={3d,15u} r7={9d,29u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={1u} r17={7d} r18={4d} r19={4d} r20={1d,2u} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={4d} r37={4d} r38={4d} r39={4d} r40={4d} r41={4d} r42={4d} r43={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r76={4d} r77={4d} r78={4d} r79={4d} r80={4d} 
+;;    total ref usage 386{327d,59u,0e} in 26{22 regular + 4 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 40 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 40 3 41 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) ..\Str\str.cpp:146 -1
+     (nil))
+(insn/f 41 40 42 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) ..\Str\str.cpp:146 -1
+     (nil))
+(insn/f 42 41 43 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) ..\Str\str.cpp:146 -1
+     (nil))
+(insn/f 43 42 44 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -20 [0xffffffffffffffec])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) ..\Str\str.cpp:146 -1
+     (nil))
+(note 44 43 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 44 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [0 left+0 S4 A32])) ..\Str\str.cpp:147 83 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [88])) ..\Str\str.cpp:147 83 {*movsi_internal}
+     (nil))
+(insn 7 6 50 2 (set (reg:SI 2 cx)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:147 83 {*movsi_internal}
+     (nil))
+(note 50 7 8 2 0 NOTE_INSN_EH_REGION_BEG)
+(call_insn 8 50 51 2 (parallel [
+            (call (mem:QI (symbol_ref:SI ("_ZN3StrC1ERKS_") [flags 0x3]  <function_decl 04e59e00 __comp_ctor >) [0 __comp_ctor  S1 A8])
+                (const_int 4 [0x4]))
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])))
+        ]) ..\Str\str.cpp:147 562 {*call_pop}
+     (expr_list:REG_ARGS_SIZE (const_int -4 [0xfffffffffffffffc])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+            (nil))))
+(note 51 8 9 2 0 NOTE_INSN_EH_REGION_END)
+(insn 9 51 10 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) ..\Str\str.cpp:147 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:SI 0 ax [89])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [0 right+0 S4 A32])) ..\Str\str.cpp:148 83 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [89])) ..\Str\str.cpp:148 83 {*movsi_internal}
+     (nil))
+(insn 12 11 52 2 (set (reg:SI 2 cx)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:148 83 {*movsi_internal}
+     (nil))
+(note 52 12 13 2 1 NOTE_INSN_EH_REGION_BEG)
+(call_insn 13 52 53 2 (parallel [
+            (set (reg:SI 0 ax)
+                (call (mem:QI (symbol_ref:SI ("_ZN3StrpLERKS_") [flags 0x3]  <function_decl 04e59700 operator+=>) [0 operator+= S1 A8])
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])))
+        ]) ..\Str\str.cpp:148 571 {*call_value_pop}
+     (expr_list:REG_EH_REGION (const_int 1 [0x1])
+        (expr_list:REG_ARGS_SIZE (const_int -4 [0xfffffffffffffffc])
+            (nil)))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+            (nil))))
+(note 53 13 32 1 NOTE_INSN_EH_REGION_END)
+(note 32 53 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 32 37 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) ..\Str\str.cpp:148 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 37 14 38 3 (set (pc)
+        (label_ref 36)) ..\Str\str.cpp:149 551 {jump}
+     (nil)
+ -> 36)
+(barrier 38 37 33)
+(code_label/s 33 38 35 4 67 "" [1 uses])
+(note 35 33 34 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 34 35 22 4 (set (reg:SI 3 bx [90])
+        (reg:SI 0 ax)) 83 {*movsi_internal}
+     (nil))
+(insn 22 34 23 4 (set (reg:SI 2 cx)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) 83 {*movsi_internal}
+     (nil))
+(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("_ZN3StrD1Ev") [flags 0x3]  <function_decl 04e5f100 __comp_dtor >) [0 __comp_dtor  S1 A8])
+        (const_int 0 [0])) 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 24 23 25 4 (set (reg/f:SI 0 ax [orig:87 D.21541 ] [87])
+        (reg:SI 3 bx [90])) 83 {*movsi_internal}
+     (nil))
+(insn 25 24 54 4 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [orig:87 D.21541 ] [87])) 83 {*movsi_internal}
+     (nil))
+(note 54 25 26 4 2 NOTE_INSN_EH_REGION_BEG)
+(call_insn 26 54 55 4 (call (mem:QI (symbol_ref:SI ("_Unwind_Resume") [flags 0x43]  <function_decl 041dff00 __builtin_unwind_resume>) [0 __builtin_unwind_resume S1 A8])
+        (const_int 4 [0x4])) 556 {*call}
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+        (nil)))
+(note 55 26 27 2 NOTE_INSN_EH_REGION_END)
+(barrier 27 55 36)
+(code_label 36 27 31 5 68 "" [1 uses])
+(note 31 36 29 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 29 31 30 5 (set (reg/i:SI 0 ax)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:150 83 {*movsi_internal}
+     (nil))
+(insn 30 29 45 5 (use (reg/i:SI 0 ax)) ..\Str\str.cpp:150 -1
+     (nil))
+(note 45 30 46 5 NOTE_INSN_EPILOGUE_BEG)
+(insn 46 45 47 5 (set (reg:SI 3 bx)
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [0  S4 A8])) ..\Str\str.cpp:150 -1
+     (nil))
+(insn/f 47 46 48 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) ..\Str\str.cpp:150 -1
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+                (nil)))))
+(jump_insn 48 47 49 5 (simple_return) ..\Str\str.cpp:150 -1
+     (nil)
+ -> simple_return)
+(barrier 49 48 39)
+(note 39 49 0 NOTE_INSN_DELETED)
+
+;; Function Str operator+(char, const Str&) (_ZplcRK3Str, funcdef_no=1030, decl_uid=21066, cgraph_uid=207, symbol_order=208)
+
+
+
+Str operator+(char, const Str&)
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0[ax] 1[dx] 2[cx] 3[bx] 6[bp] 7[sp] 17[flags]
+;;  ref usage 	r0={14d,9u} r1={9d,2u} r2={10d,4u} r3={3d,3u} r6={3d,19u} r7={7d,30u} r8={5d} r9={5d} r10={5d} r11={5d} r12={5d} r13={5d} r14={5d} r15={5d} r16={1u} r17={7d} r18={5d} r19={5d} r20={1d,2u} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={5d} r37={5d} r38={5d} r39={5d} r40={5d} r41={5d} r42={5d} r43={5d} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} r76={5d} r77={5d} r78={5d} r79={5d} r80={5d} 
+;;    total ref usage 474{404d,70u,0e} in 36{31 regular + 5 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 54 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 54 5 55 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) ..\Str\str.cpp:152 -1
+     (nil))
+(insn/f 55 54 56 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) ..\Str\str.cpp:152 -1
+     (nil))
+(insn/f 56 55 57 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) ..\Str\str.cpp:152 -1
+     (nil))
+(insn/f 57 56 58 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -52 [0xffffffffffffffcc])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) ..\Str\str.cpp:152 -1
+     (nil))
+(note 58 57 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 58 3 2 (set (reg:SI 0 ax [90])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [0 left+0 S4 A32])) ..\Str\str.cpp:152 83 {*movsi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:QI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [0 left+0 S1 A32])
+        (reg:QI 0 ax [90])) ..\Str\str.cpp:152 86 {*movqi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 52 2 (set (reg:SI 1 dx [orig:88 D.21544 ] [88])
+        (sign_extend:SI (mem/c:QI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [0 left+0 S1 A32]))) ..\Str\str.cpp:153 131 {extendqisi2}
+     (nil))
+(insn 52 7 9 2 (set (reg:SI 0 ax [91])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:153 191 {*leasi}
+     (nil))
+(insn 9 52 10 2 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg:SI 1 dx [orig:88 D.21544 ] [88])) ..\Str\str.cpp:153 83 {*movsi_internal}
+     (nil))
+(insn 10 9 64 2 (set (reg:SI 2 cx)
+        (reg:SI 0 ax [91])) ..\Str\str.cpp:153 83 {*movsi_internal}
+     (nil))
+(note 64 10 11 2 3 NOTE_INSN_EH_REGION_BEG)
+(call_insn 11 64 65 2 (parallel [
+            (call (mem:QI (symbol_ref:SI ("_ZN3StrC1Ec") [flags 0x3]  <function_decl 04e59f00 __comp_ctor >) [0 __comp_ctor  S1 A8])
+                (const_int 4 [0x4]))
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])))
+        ]) ..\Str\str.cpp:153 562 {*call_pop}
+     (expr_list:REG_ARGS_SIZE (const_int -4 [0xfffffffffffffffc])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (expr_list:SI (use (mem:SI (reg/f:SI 7 sp) [0  S4 A32]))
+            (nil))))
+(note 65 11 12 2 3 NOTE_INSN_EH_REGION_END)
+(insn 12 65 13 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) ..\Str\str.cpp:153 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 1 dx [orig:89 D.21544 ] [89])
+        (sign_extend:SI (mem/c:QI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [0 left+0 S1 A32]))) ..\Str\str.cpp:154 131 {extendqisi2}
+     (nil))
+(insn 14 13 53 2 (set (reg/f:SI 0 ax [92])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:154 83 {*movsi_internal}
+     (nil))
+(insn 53 14 16 2 (set (reg:SI 2 cx [93])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:154 191 {*leasi}
+     (nil))
+(insn 16 53 17 2 (set (mem/f:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 2 cx [93])) ..\Str\str.cpp:154 83 {*movsi_internal}
+     (nil))
+(insn 17 16 18 2 (set (mem:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg:SI 1 dx [orig:89 D.21544 ] [89])) ..\Str\str.cpp:154 83 {*movsi_internal}
+     (nil))
+(insn 18 17 66 2 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [92])) ..\Str\str.cpp:154 83 {*movsi_internal}
+     (nil))
+(note 66 18 19 2 4 NOTE_INSN_EH_REGION_BEG)
+(call_insn 19 66 67 2 (call (mem:QI (symbol_ref:SI ("_ZplcRK3Str") [flags 0x3]  <function_decl 04e5f900 operator+>) [0 operator+ S1 A8])
+        (const_int 12 [0xc])) ..\Str\str.cpp:154 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 2 [0x2])
+        (nil))
+    (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+        (expr_list:SI (use (mem:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+            (expr_list:SI (use (mem/f:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 8 [0x8])) [0  S4 A32]))
+                (nil)))))
+(note 67 19 20 4 NOTE_INSN_EH_REGION_END)
+(note 20 67 45 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 45 20 51 3 (const_int 0 [0]) ..\Str\str.cpp:154 581 {nop}
+     (nil))
+(insn 51 45 23 3 (set (reg:SI 0 ax [94])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:153 191 {*leasi}
+     (nil))
+(insn 23 51 24 3 (set (reg:SI 2 cx)
+        (reg:SI 0 ax [94])) ..\Str\str.cpp:153 83 {*movsi_internal}
+     (nil))
+(call_insn 24 23 47 3 (call (mem:QI (symbol_ref:SI ("_ZN3StrD1Ev") [flags 0x3]  <function_decl 04e5f100 __comp_dtor >) [0 __comp_dtor  S1 A8])
+        (const_int 0 [0])) ..\Str\str.cpp:153 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(jump_insn 47 24 48 3 (set (pc)
+        (label_ref 46)) ..\Str\str.cpp:154 551 {jump}
+     (nil)
+ -> 46)
+(barrier 48 47 42)
+(code_label/s 42 48 44 4 72 "" [1 uses])
+(note 44 42 43 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 43 44 50 4 (set (reg:SI 3 bx [96])
+        (reg:SI 0 ax)) 83 {*movsi_internal}
+     (nil))
+(insn 50 43 32 4 (set (reg:SI 0 ax [95])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:153 191 {*leasi}
+     (nil))
+(insn 32 50 33 4 (set (reg:SI 2 cx)
+        (reg:SI 0 ax [95])) ..\Str\str.cpp:153 83 {*movsi_internal}
+     (nil))
+(call_insn 33 32 34 4 (call (mem:QI (symbol_ref:SI ("_ZN3StrD1Ev") [flags 0x3]  <function_decl 04e5f100 __comp_dtor >) [0 __comp_dtor  S1 A8])
+        (const_int 0 [0])) ..\Str\str.cpp:153 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 34 33 35 4 (set (reg/f:SI 0 ax [orig:87 D.21543 ] [87])
+        (reg:SI 3 bx [96])) 83 {*movsi_internal}
+     (nil))
+(insn 35 34 68 4 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [orig:87 D.21543 ] [87])) 83 {*movsi_internal}
+     (nil))
+(note 68 35 36 4 5 NOTE_INSN_EH_REGION_BEG)
+(call_insn 36 68 69 4 (call (mem:QI (symbol_ref:SI ("_Unwind_Resume") [flags 0x43]  <function_decl 041dff00 __builtin_unwind_resume>) [0 __builtin_unwind_resume S1 A8])
+        (const_int 4 [0x4])) 556 {*call}
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+        (nil)))
+(note 69 36 37 5 NOTE_INSN_EH_REGION_END)
+(barrier 37 69 46)
+(code_label 46 37 41 5 73 "" [1 uses])
+(note 41 46 39 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 39 41 40 5 (set (reg/i:SI 0 ax)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:155 83 {*movsi_internal}
+     (nil))
+(insn 40 39 59 5 (use (reg/i:SI 0 ax)) ..\Str\str.cpp:155 -1
+     (nil))
+(note 59 40 60 5 NOTE_INSN_EPILOGUE_BEG)
+(insn 60 59 61 5 (set (reg:SI 3 bx)
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [0  S4 A8])) ..\Str\str.cpp:155 -1
+     (nil))
+(insn/f 61 60 62 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) ..\Str\str.cpp:155 -1
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+                (nil)))))
+(jump_insn 62 61 63 5 (simple_return) ..\Str\str.cpp:155 -1
+     (nil)
+ -> simple_return)
+(barrier 63 62 49)
+(note 49 63 0 NOTE_INSN_DELETED)
+
+;; Function Str operator+(const Str&, char) (_ZplRK3Strc, funcdef_no=1031, decl_uid=20905, cgraph_uid=208, symbol_order=209)
+
+
+
+Str operator+(const Str&, char)
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0[ax] 1[dx] 2[cx] 3[bx] 6[bp] 7[sp] 17[flags]
+;;  ref usage 	r0={14d,9u} r1={10d,3u} r2={9d,3u} r3={3d,3u} r6={3d,19u} r7={7d,30u} r8={5d} r9={5d} r10={5d} r11={5d} r12={5d} r13={5d} r14={5d} r15={5d} r16={1u} r17={7d} r18={5d} r19={5d} r20={1d,2u} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={5d} r37={5d} r38={5d} r39={5d} r40={5d} r41={5d} r42={5d} r43={5d} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} r76={5d} r77={5d} r78={5d} r79={5d} r80={5d} 
+;;    total ref usage 474{404d,70u,0e} in 36{31 regular + 5 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 54 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 54 5 55 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) ..\Str\str.cpp:157 -1
+     (nil))
+(insn/f 55 54 56 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) ..\Str\str.cpp:157 -1
+     (nil))
+(insn/f 56 55 57 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) ..\Str\str.cpp:157 -1
+     (nil))
+(insn/f 57 56 58 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -52 [0xffffffffffffffcc])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) ..\Str\str.cpp:157 -1
+     (nil))
+(note 58 57 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 58 3 2 (set (reg:SI 0 ax [89])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [0 right+0 S4 A32])) ..\Str\str.cpp:157 83 {*movsi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:QI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [0 right+0 S1 A32])
+        (reg:QI 0 ax [89])) ..\Str\str.cpp:157 86 {*movqi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 52 2 (set (reg:SI 1 dx [orig:88 D.21548 ] [88])
+        (sign_extend:SI (mem/c:QI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [0 right+0 S1 A32]))) ..\Str\str.cpp:158 131 {extendqisi2}
+     (nil))
+(insn 52 7 9 2 (set (reg:SI 0 ax [90])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:158 191 {*leasi}
+     (nil))
+(insn 9 52 10 2 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg:SI 1 dx [orig:88 D.21548 ] [88])) ..\Str\str.cpp:158 83 {*movsi_internal}
+     (nil))
+(insn 10 9 64 2 (set (reg:SI 2 cx)
+        (reg:SI 0 ax [90])) ..\Str\str.cpp:158 83 {*movsi_internal}
+     (nil))
+(note 64 10 11 2 6 NOTE_INSN_EH_REGION_BEG)
+(call_insn 11 64 65 2 (parallel [
+            (call (mem:QI (symbol_ref:SI ("_ZN3StrC1Ec") [flags 0x3]  <function_decl 04e59f00 __comp_ctor >) [0 __comp_ctor  S1 A8])
+                (const_int 4 [0x4]))
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])))
+        ]) ..\Str\str.cpp:158 562 {*call_pop}
+     (expr_list:REG_ARGS_SIZE (const_int -4 [0xfffffffffffffffc])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (expr_list:SI (use (mem:SI (reg/f:SI 7 sp) [0  S4 A32]))
+            (nil))))
+(note 65 11 12 2 6 NOTE_INSN_EH_REGION_END)
+(insn 12 65 13 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) ..\Str\str.cpp:158 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 13 12 53 2 (set (reg/f:SI 0 ax [91])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:159 83 {*movsi_internal}
+     (nil))
+(insn 53 13 15 2 (set (reg:SI 1 dx [92])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:159 191 {*leasi}
+     (nil))
+(insn 15 53 16 2 (set (mem/f:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 1 dx [92])) ..\Str\str.cpp:159 83 {*movsi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 1 dx [93])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [0 left+0 S4 A32])) ..\Str\str.cpp:159 83 {*movsi_internal}
+     (nil))
+(insn 17 16 18 2 (set (mem:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg/f:SI 1 dx [93])) ..\Str\str.cpp:159 83 {*movsi_internal}
+     (nil))
+(insn 18 17 66 2 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [91])) ..\Str\str.cpp:159 83 {*movsi_internal}
+     (nil))
+(note 66 18 19 2 7 NOTE_INSN_EH_REGION_BEG)
+(call_insn 19 66 67 2 (call (mem:QI (symbol_ref:SI ("_ZplRK3StrS1_") [flags 0x3]  <function_decl 04e59600 operator+>) [0 operator+ S1 A8])
+        (const_int 12 [0xc])) ..\Str\str.cpp:159 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 2 [0x2])
+        (nil))
+    (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+        (expr_list:SI (use (mem/f:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+            (expr_list:SI (use (mem/f:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 8 [0x8])) [0  S4 A32]))
+                (nil)))))
+(note 67 19 20 7 NOTE_INSN_EH_REGION_END)
+(note 20 67 45 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 45 20 51 3 (const_int 0 [0]) ..\Str\str.cpp:159 581 {nop}
+     (nil))
+(insn 51 45 23 3 (set (reg:SI 0 ax [94])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:158 191 {*leasi}
+     (nil))
+(insn 23 51 24 3 (set (reg:SI 2 cx)
+        (reg:SI 0 ax [94])) ..\Str\str.cpp:158 83 {*movsi_internal}
+     (nil))
+(call_insn 24 23 47 3 (call (mem:QI (symbol_ref:SI ("_ZN3StrD1Ev") [flags 0x3]  <function_decl 04e5f100 __comp_dtor >) [0 __comp_dtor  S1 A8])
+        (const_int 0 [0])) ..\Str\str.cpp:158 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(jump_insn 47 24 48 3 (set (pc)
+        (label_ref 46)) ..\Str\str.cpp:159 551 {jump}
+     (nil)
+ -> 46)
+(barrier 48 47 42)
+(code_label/s 42 48 44 4 77 "" [1 uses])
+(note 44 42 43 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 43 44 50 4 (set (reg:SI 3 bx [96])
+        (reg:SI 0 ax)) 83 {*movsi_internal}
+     (nil))
+(insn 50 43 32 4 (set (reg:SI 0 ax [95])
+        (plus:SI (reg/f:SI 6 bp)
+            (const_int -16 [0xfffffffffffffff0]))) ..\Str\str.cpp:158 191 {*leasi}
+     (nil))
+(insn 32 50 33 4 (set (reg:SI 2 cx)
+        (reg:SI 0 ax [95])) ..\Str\str.cpp:158 83 {*movsi_internal}
+     (nil))
+(call_insn 33 32 34 4 (call (mem:QI (symbol_ref:SI ("_ZN3StrD1Ev") [flags 0x3]  <function_decl 04e5f100 __comp_dtor >) [0 __comp_dtor  S1 A8])
+        (const_int 0 [0])) ..\Str\str.cpp:158 556 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 34 33 35 4 (set (reg/f:SI 0 ax [orig:87 D.21547 ] [87])
+        (reg:SI 3 bx [96])) 83 {*movsi_internal}
+     (nil))
+(insn 35 34 68 4 (set (mem:SI (reg/f:SI 7 sp) [0  S4 A32])
+        (reg/f:SI 0 ax [orig:87 D.21547 ] [87])) 83 {*movsi_internal}
+     (nil))
+(note 68 35 36 4 8 NOTE_INSN_EH_REGION_BEG)
+(call_insn 36 68 69 4 (call (mem:QI (symbol_ref:SI ("_Unwind_Resume") [flags 0x43]  <function_decl 041dff00 __builtin_unwind_resume>) [0 __builtin_unwind_resume S1 A8])
+        (const_int 4 [0x4])) 556 {*call}
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (mem/f:SI (reg/f:SI 7 sp) [0  S4 A32]))
+        (nil)))
+(note 69 36 37 8 NOTE_INSN_EH_REGION_END)
+(barrier 37 69 46)
+(code_label 46 37 41 5 78 "" [1 uses])
+(note 41 46 39 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 39 41 40 5 (set (reg/i:SI 0 ax)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [0 .result_ptr+0 S4 A32])) ..\Str\str.cpp:160 83 {*movsi_internal}
+     (nil))
+(insn 40 39 59 5 (use (reg/i:SI 0 ax)) ..\Str\str.cpp:160 -1
+     (nil))
+(note 59 40 60 5 NOTE_INSN_EPILOGUE_BEG)
+(insn 60 59 61 5 (set (reg:SI 3 bx)
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [0  S4 A8])) ..\Str\str.cpp:160 -1
+     (nil))
+(insn/f 61 60 62 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) ..\Str\str.cpp:160 -1
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+                (nil)))))
+(jump_insn 62 61 63 5 (simple_return) ..\Str\str.cpp:160 -1
+     (nil)
+ -> simple_return)
+(barrier 63 62 49)
+(note 49 63 0 NOTE_INSN_DELETED)
